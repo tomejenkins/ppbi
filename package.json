@@ -1,5 +1,9 @@
 {
+<<<<<<< codex/build-production-mvp-for-wms-f06avj
   "name": "process-pulse-bi-force-wms",
+=======
+  "name": "wms-mvp",
+>>>>>>> main
   "private": true,
   "version": "0.1.0",
   "type": "module",

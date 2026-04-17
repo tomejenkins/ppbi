@@ -28,7 +28,7 @@ export function LoginPage() {
   return (
     <div className="mx-auto mt-20 max-w-md">
       <Card>
-        <h2 className="mb-4 text-lg font-semibold">Sign in to Force WMS</h2>
+        <h2 className="mb-4 text-lg font-semibold">Sign in to Forge WMS</h2>
         <form className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
           <input placeholder="Email" {...register('email')} />
           <input placeholder="Password" type="password" {...register('password')} />

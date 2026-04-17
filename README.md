@@ -1,7 +1,14 @@
+<<<<<<< codex/build-production-mvp-for-wms-f06avj
 # Process Pulse Business Intelligence (Force WMS MVP)
 
 ## 1) Architecture Summary
 Process Pulse Business Intelligence's Force WMS module is a mobile-first, production-minded MVP for warehouse execution. The frontend is a React + Vite + TypeScript single-page app with React Router, TanStack Query, React Hook Form, and Zod validation. Supabase provides Auth, Postgres, RLS, Storage, Realtime, and Edge Functions. Inventory is strictly transaction-based: all balance changes are performed through `post_inventory_transaction`; direct balance edits are prohibited.
+=======
+# Forge WMS MVP
+
+## 1) Architecture Summary
+Forge WMS is a mobile-first, production-minded MVP for warehouse execution. The frontend is a React + Vite + TypeScript single-page app with React Router, TanStack Query, React Hook Form, and Zod validation. Supabase provides Auth, Postgres, RLS, Storage, Realtime, and Edge Functions. Inventory is strictly transaction-based: all balance changes are performed through `post_inventory_transaction`; direct balance edits are prohibited.
+>>>>>>> main
 
 ### Core architectural decisions
 - **Facility-scoped, role-based access** with Supabase RLS and `facility_id` on operational tables.

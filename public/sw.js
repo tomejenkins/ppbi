@@ -1,4 +1,8 @@
+<<<<<<< codex/build-production-mvp-for-wms-f06avj
 const CACHE = 'force-wms-v1';
+=======
+const CACHE = 'forge-wms-v1';
+>>>>>>> main
 const ASSETS = ['/', '/index.html', '/manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {

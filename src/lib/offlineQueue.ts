@@ -1,6 +1,10 @@
 import { openDB } from 'idb';
 
+<<<<<<< codex/build-production-mvp-for-wms-f06avj
 const DB_NAME = 'force-wms-offline';
+=======
+const DB_NAME = 'forge-wms-offline';
+>>>>>>> main
 const STORE = 'queue';
 
 export type OfflineTxn = {
