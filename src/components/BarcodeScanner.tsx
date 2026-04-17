@@ -12,6 +12,7 @@ export function BarcodeScanner({ onDetected }: Props) {
   useEffect(() => {
     let active = true;
     let stream: MediaStream | null = null;
+    let controls: { stop: () => void } | undefined;
     let raf = 0;
     const zxing = new BrowserMultiFormatReader();
 
@@ -42,6 +43,7 @@ export function BarcodeScanner({ onDetected }: Props) {
           return;
         }
 
+        controls = await zxing.decodeFromVideoDevice(undefined, videoRef.current, (result) => {
         zxing.decodeFromVideoDevice(undefined, videoRef.current, (result) => {
           if (result) {
             onDetected(result.getText());
@@ -57,6 +59,7 @@ export function BarcodeScanner({ onDetected }: Props) {
     return () => {
       active = false;
       cancelAnimationFrame(raf);
+      controls?.stop();
       zxing.reset();
       stream?.getTracks().forEach((track) => track.stop());
     };
