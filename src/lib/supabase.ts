@@ -35,8 +35,6 @@ if (supabaseConfigError) {
     missingKeys: missingSupabaseEnvKeys
   });
 }
-<<<<<<< codex/build-production-mvp-for-wms-f06avj
-=======
 if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables');
 }
@@ -48,4 +46,3 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     detectSessionInUrl: true
   }
 });
->>>>>>> main
