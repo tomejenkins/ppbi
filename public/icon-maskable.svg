@@ -1,4 +1,8 @@
+<<<<<<< codex/build-production-mvp-for-wms-f06avj
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Force WMS maskable icon">
+=======
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Forge WMS maskable icon">
+>>>>>>> main
   <rect width="512" height="512" fill="#0f172a"/>
   <circle cx="256" cy="256" r="176" fill="#1e293b" stroke="#38bdf8" stroke-width="16"/>
   <text x="256" y="280" text-anchor="middle" font-size="160" font-family="Arial, sans-serif" fill="#e2e8f0" font-weight="700">W</text>
