@@ -154,9 +154,18 @@ create table public.inventory_balances (
   serial_id uuid references public.serial_numbers(id),
   status public.inventory_status not null default 'available',
   quantity numeric(14,3) not null default 0,
-  version int not null default 1,
-  unique (facility_id, item_id, location_id, coalesce(lot_id, '00000000-0000-0000-0000-000000000000'::uuid), coalesce(serial_id, '00000000-0000-0000-0000-000000000000'::uuid), status)
+  version int not null default 1
 );
+
+create unique index inventory_balances_unique_dim_idx
+  on public.inventory_balances (
+    facility_id,
+    item_id,
+    location_id,
+    coalesce(lot_id, '00000000-0000-0000-0000-000000000000'::uuid),
+    coalesce(serial_id, '00000000-0000-0000-0000-000000000000'::uuid),
+    status
+  );
 
 create table public.inventory_transactions (
   id uuid primary key default gen_random_uuid(),
