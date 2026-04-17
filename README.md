@@ -80,6 +80,14 @@ Implemented initial release scope screens and wiring:
 3. Add env vars from `.env.example` in Cloudflare Pages project settings.
 4. Use `wrangler.toml` in repo root for Pages config.
 
+### Troubleshooting missing frontend env vars on Cloudflare Pages
+- Vite reads `VITE_*` variables at build time, not runtime. Trigger a new deploy after adding/updating vars.
+- Define variables in Pages project settings (not Workers) for the correct environment (Preview and/or Production).
+- Required keys:
+  - `VITE_SUPABASE_URL`
+  - `VITE_SUPABASE_ANON_KEY`
+- If values were just updated, retry deployment with build cache cleared.
+
 ## Security notes
 - Never expose service role keys in frontend env.
 - Keep service-role usage only in Supabase Edge Functions.
