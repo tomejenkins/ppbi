@@ -1,4 +1,7 @@
 name = "forge-wms"
 compatibility_date = "2026-04-17"
 pages_build_output_dir = "dist"
-node -e "console.log('VITE_SUPABASE_URL?', !!process.env.VITE_SUPABASE_URL, 'VITE_SUPABASE_ANON_KEY?', !!process.env.VITE_SUPABASE_ANON_KEY)" && npm run build
+
+[vars]
+VITE_SUPABASE_URL = "https://hfffqjatxyfkjpskgdpb.supabase.co"
+VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmZmZxamF0eHlma2pwc2tnZHBiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYzOTQ1MzMsImV4cCI6MjA5MTk3MDUzM30.xhfMvSksBIBcklQcJqRrGJC7Id24kmDJXPmQQ7BKFmc"
