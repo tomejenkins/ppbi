@@ -18,11 +18,7 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-slate-100">
       <header className="sticky top-0 z-10 bg-slate-900 p-3 text-white">
-<<<<<<< codex/build-production-mvp-for-wms-f06avj
         <h1 className="text-lg font-semibold">Process Pulse BI · Force WMS</h1>
-=======
-        <h1 className="text-lg font-semibold">Forge WMS MVP</h1>
->>>>>>> main
       </header>
       <nav className="overflow-x-auto bg-white px-2 py-2 shadow">
         <ul className="flex min-w-max gap-2">
