@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { supabase, supabaseConfigError } from '../../lib/supabase';
-import { supabase } from '../../lib/supabase';
 import { Card } from '../../components/Card';
 
 const schema = z.object({
@@ -22,10 +21,6 @@ export function LoginPage() {
       setMessage(supabaseConfigError ?? 'Supabase is not configured.');
       return;
     }
-  const [message, setMessage] = useState('');
-  const { register, handleSubmit } = useForm<FormValues>({ resolver: zodResolver(schema) });
-
-  const onSubmit = async (data: FormValues) => {
     const { error } = await supabase.auth.signInWithPassword(data);
     setMessage(error ? error.message : 'Login successful.');
   };
@@ -40,7 +35,6 @@ export function LoginPage() {
           <button type="submit" className="w-full" disabled={!supabase}>
             Sign in
           </button>
-          <button type="submit" className="w-full">Sign in</button>
           {message ? <p className="text-sm text-slate-700">{message}</p> : null}
         </form>
       </Card>
