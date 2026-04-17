@@ -44,7 +44,6 @@ export function BarcodeScanner({ onDetected }: Props) {
         }
 
         controls = await zxing.decodeFromVideoDevice(undefined, videoRef.current, (result) => {
-        zxing.decodeFromVideoDevice(undefined, videoRef.current, (result) => {
           if (result) {
             onDetected(result.getText());
           }
@@ -60,7 +59,6 @@ export function BarcodeScanner({ onDetected }: Props) {
       active = false;
       cancelAnimationFrame(raf);
       controls?.stop();
-      zxing.reset();
       stream?.getTracks().forEach((track) => track.stop());
     };
   }, [onDetected]);
